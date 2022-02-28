@@ -34,7 +34,13 @@ console.log(`lessThan100(100, 10) === false : ${lessThan100(100, 10) === false}`
 // that accepts a first_name and last_name as required parameters
 // and a third parameter called middle_name which is optional.
 // The function should return a string with the first, middle and last names
-function getFormattedName() {}
+function getFormattedName(first_name, last_name, middle_name = '') {
+    if (middle_name !== '') {
+        return (first_name + ' ' + middle_name + ' ' + last_name);
+    } else {
+        return (first_name + ' ' + last_name);
+    }
+}
 console.log(
     `getFormattedName('Ruth', 'Ginsburg') === 'Ruth Ginsburg': ${
         getFormattedName('Ruth', 'Ginsburg') === 'Ruth Ginsburg'
