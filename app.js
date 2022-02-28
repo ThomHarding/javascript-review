@@ -6,7 +6,9 @@
 // a number of minutes as an argument and returns
 // the number of seconds
 
-function convertToSeconds() {}
+function convertToSeconds(seconds) {
+    return (seconds * 60);
+}
 
 console.log(`convertToSeconds(10) === 600 : ${convertToSeconds(10) === 600}`);
 
