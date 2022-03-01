@@ -63,7 +63,8 @@ console.log(
 //    number of days for Feb. The default value for the year should be
 //    the current year
 function daysInMonth(month, year = true) {
-    if (year === false && month === 2) {
+    let leapYear = ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
+    if (leapYear === false && month === 2) {
         return 28;
     } else {
         switch (month) {
